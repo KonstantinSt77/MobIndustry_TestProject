@@ -20,6 +20,7 @@
 		483A6A082118D5B4007B3B66 /* MICarList_Presenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 483A6A072118D5B4007B3B66 /* MICarList_Presenter.m */; };
 		483A6A0B2118D5C6007B3B66 /* MICarList_Model.m in Sources */ = {isa = PBXBuildFile; fileRef = 483A6A0A2118D5C6007B3B66 /* MICarList_Model.m */; };
 		483A6A172118D774007B3B66 /* MICarListTVCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 483A6A162118D774007B3B66 /* MICarListTVCell.m */; };
+		483A6A192119091F007B3B66 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 483A6A182119091F007B3B66 /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +65,7 @@
 		483A6A0A2118D5C6007B3B66 /* MICarList_Model.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MICarList_Model.m; sourceTree = "<group>"; };
 		483A6A152118D774007B3B66 /* MICarListTVCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MICarListTVCell.h; sourceTree = "<group>"; };
 		483A6A162118D774007B3B66 /* MICarListTVCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MICarListTVCell.m; sourceTree = "<group>"; };
+		483A6A182119091F007B3B66 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +96,7 @@
 		483A69C12118C161007B3B66 = {
 			isa = PBXGroup;
 			children = (
+				483A6A182119091F007B3B66 /* README.md */,
 				483A69CC2118C161007B3B66 /* MobIndustry_TestProject */,
 				483A69E52118C163007B3B66 /* MobIndustry_TestProjectTests */,
 				483A69F02118C163007B3B66 /* MobIndustry_TestProjectUITests */,
@@ -312,6 +315,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				483A6A192119091F007B3B66 /* README.md in Resources */,
 				483A69DA2118C163007B3B66 /* LaunchScreen.storyboard in Resources */,
 				483A69D72118C163007B3B66 /* Assets.xcassets in Resources */,
 				483A6A022118CEF3007B3B66 /* TestTask.txt in Resources */,

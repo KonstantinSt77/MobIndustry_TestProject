@@ -62,14 +62,20 @@ static NSString* const ArrowName = @"arrow";
 
 -(void)infoShow
 {
-    if(self.textView.isHidden)
-    {
-        self.textView.hidden = NO;
-    }
-    else
-    {
-        self.textView.hidden = YES;
-    }
+    [UIView transitionWithView:self.textView
+                      duration:0.4
+                       options:UIViewAnimationOptionTransitionCrossDissolve
+                    animations:^{
+                        if(self.textView.isHidden)
+                        {
+                            self.textView.hidden = NO;
+                        }
+                        else
+                        {
+                            self.textView.hidden = YES;
+                        }
+                    }
+                    completion:NULL];
 }
 
 -(void)updateViewWithData:(NSDictionary *)dataDict
@@ -176,6 +182,7 @@ static NSString* const ArrowName = @"arrow";
 
 -(void)refreshTabelView
 {
+    self.textView.hidden = YES;
     self.expandedSectionHeaderNumber = -1;
     [self.carsInfo removeAllObjects];
     [self.carsName removeAllObjects];
