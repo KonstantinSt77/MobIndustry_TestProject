@@ -65,9 +65,18 @@
     
 }
 
+-(NSString *)getTaskInfo
+{
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"TestTask" ofType:@"txt"];
+    NSString *content = [NSString stringWithContentsOfFile:path
+                                                  encoding:NSUTF8StringEncoding
+                                                     error:NULL];
+    return content;
+}
+
 -(NSDictionary *)getDataFromDBA
 {
-    NMutableDictionary *data = [NSMutableDictionary new];
+    NSMutableDictionary *data = [NSMutableDictionary new];
     return data;
 }
 

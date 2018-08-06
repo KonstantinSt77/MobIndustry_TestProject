@@ -18,6 +18,7 @@ static NSString* const ArrowName = @"arrow";
 
 @interface MICarList_VC ()<UITableViewDelegate, UITableViewDataSource>
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
+@property (strong, nonatomic) IBOutlet UITextView *textView;
 @property (strong, nonatomic) MICarList_Presenter *presenter;
 @property (strong, nonatomic) NSMutableArray *carsName;
 @property (strong, nonatomic) NSMutableArray *carsInfo;
@@ -33,6 +34,7 @@ static NSString* const ArrowName = @"arrow";
     
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
+    self.textView.hidden = YES;
     self.expandedSectionHeaderNumber = -1;
     
     _presenter = [MICarList_Presenter new];
@@ -54,7 +56,20 @@ static NSString* const ArrowName = @"arrow";
 
 - (IBAction)getTaskInfo:(id)sender
 {
-    
+    self.textView.text = [_presenter getTaskInfo];
+    [self infoShow];
+}
+
+-(void)infoShow
+{
+    if(self.textView.isHidden)
+    {
+        self.textView.hidden = NO;
+    }
+    else
+    {
+        self.textView.hidden = YES;
+    }
 }
 
 -(void)updateViewWithData:(NSDictionary *)dataDict

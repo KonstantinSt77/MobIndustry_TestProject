@@ -11,6 +11,7 @@
 @interface MICarList_Presenter : NSObject
 -(void)initWithView:(id)view;
 -(void)getData;
+-(NSString *)getTaskInfo;
 -(void)refreshTabelViewDataFromServer;
 -(void)refreshTabelViewDataFromDBA;
 @end
