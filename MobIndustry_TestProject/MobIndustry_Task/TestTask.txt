@@ -1,0 +1,10 @@
+
+Task with my comments:
+
++ Create an application with one screen which contains a table with expanded cells.
++ Also page should have a navigation bar and a refresh button.
++ Simulate request to the network, which receives response in json format (use provided cars.json file).
+
+Optional: 
+1. Use MVVM -> (Use MVP not MVC)
+2. Use Database to cache fetched data -> (Use Realm get data when refresh)

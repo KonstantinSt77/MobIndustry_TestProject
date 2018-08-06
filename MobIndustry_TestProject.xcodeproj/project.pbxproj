@@ -8,13 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		483A69CF2118C161007B3B66 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 483A69CE2118C161007B3B66 /* AppDelegate.m */; };
-		483A69D22118C161007B3B66 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 483A69D12118C161007B3B66 /* ViewController.m */; };
 		483A69D52118C161007B3B66 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 483A69D32118C161007B3B66 /* Main.storyboard */; };
 		483A69D72118C163007B3B66 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 483A69D62118C163007B3B66 /* Assets.xcassets */; };
 		483A69DA2118C163007B3B66 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 483A69D82118C163007B3B66 /* LaunchScreen.storyboard */; };
 		483A69DD2118C163007B3B66 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 483A69DC2118C163007B3B66 /* main.m */; };
 		483A69E72118C163007B3B66 /* MobIndustry_TestProjectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 483A69E62118C163007B3B66 /* MobIndustry_TestProjectTests.m */; };
 		483A69F22118C163007B3B66 /* MobIndustry_TestProjectUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 483A69F12118C163007B3B66 /* MobIndustry_TestProjectUITests.m */; };
+		483A6A002118CEE9007B3B66 /* cars.json in Resources */ = {isa = PBXBuildFile; fileRef = 483A69FF2118CEE9007B3B66 /* cars.json */; };
+		483A6A022118CEF3007B3B66 /* TestTask.txt in Resources */ = {isa = PBXBuildFile; fileRef = 483A6A012118CEF3007B3B66 /* TestTask.txt */; };
+		483A6A052118D599007B3B66 /* MICarList_VC.m in Sources */ = {isa = PBXBuildFile; fileRef = 483A6A042118D599007B3B66 /* MICarList_VC.m */; };
+		483A6A082118D5B4007B3B66 /* MICarList_Presenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 483A6A072118D5B4007B3B66 /* MICarList_Presenter.m */; };
+		483A6A0B2118D5C6007B3B66 /* MICarList_Model.m in Sources */ = {isa = PBXBuildFile; fileRef = 483A6A0A2118D5C6007B3B66 /* MICarList_Model.m */; };
+		483A6A172118D774007B3B66 /* MICarListTVCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 483A6A162118D774007B3B66 /* MICarListTVCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,8 +43,6 @@
 		483A69CA2118C161007B3B66 /* MobIndustry_TestProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MobIndustry_TestProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		483A69CD2118C161007B3B66 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		483A69CE2118C161007B3B66 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		483A69D02118C161007B3B66 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		483A69D12118C161007B3B66 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		483A69D42118C161007B3B66 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		483A69D62118C163007B3B66 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		483A69D92118C163007B3B66 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -51,6 +54,16 @@
 		483A69ED2118C163007B3B66 /* MobIndustry_TestProjectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MobIndustry_TestProjectUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		483A69F12118C163007B3B66 /* MobIndustry_TestProjectUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MobIndustry_TestProjectUITests.m; sourceTree = "<group>"; };
 		483A69F32118C163007B3B66 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		483A69FF2118CEE9007B3B66 /* cars.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = cars.json; sourceTree = "<group>"; };
+		483A6A012118CEF3007B3B66 /* TestTask.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TestTask.txt; sourceTree = "<group>"; };
+		483A6A032118D599007B3B66 /* MICarList_VC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MICarList_VC.h; sourceTree = "<group>"; };
+		483A6A042118D599007B3B66 /* MICarList_VC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MICarList_VC.m; sourceTree = "<group>"; };
+		483A6A062118D5B4007B3B66 /* MICarList_Presenter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MICarList_Presenter.h; sourceTree = "<group>"; };
+		483A6A072118D5B4007B3B66 /* MICarList_Presenter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MICarList_Presenter.m; sourceTree = "<group>"; };
+		483A6A092118D5C6007B3B66 /* MICarList_Model.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MICarList_Model.h; sourceTree = "<group>"; };
+		483A6A0A2118D5C6007B3B66 /* MICarList_Model.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MICarList_Model.m; sourceTree = "<group>"; };
+		483A6A152118D774007B3B66 /* MICarListTVCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MICarListTVCell.h; sourceTree = "<group>"; };
+		483A6A162118D774007B3B66 /* MICarListTVCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MICarListTVCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,15 +114,10 @@
 		483A69CC2118C161007B3B66 /* MobIndustry_TestProject */ = {
 			isa = PBXGroup;
 			children = (
-				483A69CD2118C161007B3B66 /* AppDelegate.h */,
-				483A69CE2118C161007B3B66 /* AppDelegate.m */,
-				483A69D02118C161007B3B66 /* ViewController.h */,
-				483A69D12118C161007B3B66 /* ViewController.m */,
-				483A69D32118C161007B3B66 /* Main.storyboard */,
-				483A69D62118C163007B3B66 /* Assets.xcassets */,
-				483A69D82118C163007B3B66 /* LaunchScreen.storyboard */,
-				483A69DB2118C163007B3B66 /* Info.plist */,
-				483A69DC2118C163007B3B66 /* main.m */,
+				483A6A112118D637007B3B66 /* MobIndustry_Task */,
+				483A6A122118D692007B3B66 /* MICarList */,
+				483A6A0F2118D5EE007B3B66 /* Interface */,
+				483A6A102118D5F5007B3B66 /* Default */,
 			);
 			path = MobIndustry_TestProject;
 			sourceTree = "<group>";
@@ -130,6 +138,75 @@
 				483A69F32118C163007B3B66 /* Info.plist */,
 			);
 			path = MobIndustry_TestProjectUITests;
+			sourceTree = "<group>";
+		};
+		483A6A0C2118D5CF007B3B66 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				483A6A092118D5C6007B3B66 /* MICarList_Model.h */,
+				483A6A0A2118D5C6007B3B66 /* MICarList_Model.m */,
+				483A6A152118D774007B3B66 /* MICarListTVCell.h */,
+				483A6A162118D774007B3B66 /* MICarListTVCell.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		483A6A0D2118D5D8007B3B66 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				483A6A032118D599007B3B66 /* MICarList_VC.h */,
+				483A6A042118D599007B3B66 /* MICarList_VC.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		483A6A0E2118D5DD007B3B66 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				483A6A062118D5B4007B3B66 /* MICarList_Presenter.h */,
+				483A6A072118D5B4007B3B66 /* MICarList_Presenter.m */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		483A6A0F2118D5EE007B3B66 /* Interface */ = {
+			isa = PBXGroup;
+			children = (
+				483A69D32118C161007B3B66 /* Main.storyboard */,
+				483A69D82118C163007B3B66 /* LaunchScreen.storyboard */,
+			);
+			path = Interface;
+			sourceTree = "<group>";
+		};
+		483A6A102118D5F5007B3B66 /* Default */ = {
+			isa = PBXGroup;
+			children = (
+				483A69CD2118C161007B3B66 /* AppDelegate.h */,
+				483A69CE2118C161007B3B66 /* AppDelegate.m */,
+				483A69D62118C163007B3B66 /* Assets.xcassets */,
+				483A69DB2118C163007B3B66 /* Info.plist */,
+				483A69DC2118C163007B3B66 /* main.m */,
+			);
+			path = Default;
+			sourceTree = "<group>";
+		};
+		483A6A112118D637007B3B66 /* MobIndustry_Task */ = {
+			isa = PBXGroup;
+			children = (
+				483A69FF2118CEE9007B3B66 /* cars.json */,
+				483A6A012118CEF3007B3B66 /* TestTask.txt */,
+			);
+			path = MobIndustry_Task;
+			sourceTree = "<group>";
+		};
+		483A6A122118D692007B3B66 /* MICarList */ = {
+			isa = PBXGroup;
+			children = (
+				483A6A0C2118D5CF007B3B66 /* Model */,
+				483A6A0D2118D5D8007B3B66 /* View */,
+				483A6A0E2118D5DD007B3B66 /* Presenter */,
+			);
+			path = MICarList;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -237,6 +314,8 @@
 			files = (
 				483A69DA2118C163007B3B66 /* LaunchScreen.storyboard in Resources */,
 				483A69D72118C163007B3B66 /* Assets.xcassets in Resources */,
+				483A6A022118CEF3007B3B66 /* TestTask.txt in Resources */,
+				483A6A002118CEE9007B3B66 /* cars.json in Resources */,
 				483A69D52118C161007B3B66 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -262,8 +341,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				483A69D22118C161007B3B66 /* ViewController.m in Sources */,
+				483A6A172118D774007B3B66 /* MICarListTVCell.m in Sources */,
+				483A6A052118D599007B3B66 /* MICarList_VC.m in Sources */,
+				483A6A0B2118D5C6007B3B66 /* MICarList_Model.m in Sources */,
 				483A69DD2118C163007B3B66 /* main.m in Sources */,
+				483A6A082118D5B4007B3B66 /* MICarList_Presenter.m in Sources */,
 				483A69CF2118C161007B3B66 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -370,7 +452,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -422,7 +504,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -435,7 +517,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 487D8YHE27;
-				INFOPLIST_FILE = MobIndustry_TestProject/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/MobIndustry_TestProject/Default/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -452,7 +535,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 487D8YHE27;
-				INFOPLIST_FILE = MobIndustry_TestProject/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/MobIndustry_TestProject/Default/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

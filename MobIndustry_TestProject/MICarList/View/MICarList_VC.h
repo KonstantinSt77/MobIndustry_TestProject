@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  MICarList_VC.h
 //  MobIndustry_TestProject
 //
 //  Created by Konstantin on 06.08.2018.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
-
+@interface MICarList_VC : UIViewController
+-(void)updateViewWithData:(NSDictionary *)dataDict;
 @end
-
