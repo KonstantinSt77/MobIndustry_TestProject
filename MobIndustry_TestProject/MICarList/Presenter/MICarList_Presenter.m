@@ -65,6 +65,12 @@
     
 }
 
+-(NSDictionary *)getDataFromDBA
+{
+    NSMutableDictionary *data = [NSMutableDictionary new];
+    return data;
+}
+
 -(NSString *)getTaskInfo
 {
     NSString *path = [[NSBundle mainBundle] pathForResource:@"TestTask" ofType:@"txt"];
@@ -72,12 +78,6 @@
                                                   encoding:NSUTF8StringEncoding
                                                      error:NULL];
     return content;
-}
-
--(NSDictionary *)getDataFromDBA
-{
-    NSMutableDictionary *data = [NSMutableDictionary new];
-    return data;
 }
 
 - (NSArray *)getDataFromJSON
@@ -101,7 +101,7 @@
     UIColor *color = [UIColor performSelector:labelColor];
     
    CGColorRef colorRef = [color CGColor];
-    int _countComponents = CGColorGetNumberOfComponents(colorRef);
+    int _countComponents = (int)CGColorGetNumberOfComponents(colorRef);
     
     if (_countComponents == 4) {
         const CGFloat *_components = CGColorGetComponents(colorRef);
