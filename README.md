@@ -6,6 +6,8 @@
 * Also page should have a navigation bar and a refresh button.
 * Simulate request to the network, which receives response in json format (use provided cars.json file).*
 
+# 
+
 * MVP Architecture
 * Dynamic expanded cells
 * Data from File
@@ -13,6 +15,8 @@
 * Colors From String
 * Inverse Colors
 * Animations
+
+# 
 
 *iPhoneX supported*
 
