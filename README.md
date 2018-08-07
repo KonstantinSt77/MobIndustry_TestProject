@@ -10,15 +10,20 @@
 
 * MVP Architecture
 * Dynamic expanded cells
-* Data from File
-* Data from Realm DBA
+* Data from File (simulate server response)
+* Data from Realm DBA (cache data from DBA)
 * Colors From String
 * Inverse Colors
 * Animations
+* CocoaPods only for Realm - All Customs Elements
 
 # 
 
 *iPhoneX supported*
+
+# 
+
+*Demo gif*
 
 ![Gift](https://github.com/KonstantinSt77/MobIndustry_TestProject/blob/master/animateProject.gif)
 

@@ -22,6 +22,7 @@
 -(void)initWithView:(id)view
 {
     _carListView = view;
+    self.realmArray = [MICarList_DBAModel allObjects];
 }
 
 -(void)refreshTabelViewDataFromServer
@@ -59,28 +60,30 @@
 
 -(void)saveDataToDBA:(NSArray *)array
 {
-    for (MICarList_Model *model in array)
+    if(self.realmArray.count<array.count)
     {
-        RLMRealm *realm = [RLMRealm defaultRealm];
-        [realm beginWriteTransaction];
-        MICarList_DBAModel *favNewsDBA = [[MICarList_DBAModel alloc] init];
-        favNewsDBA.car_id = model.car_id;
-        favNewsDBA.car_type =  model.car_type;
-        favNewsDBA.car_model =  [NSString stringWithFormat:@"%@ Realm",model.car_model];
-        favNewsDBA.car_NameColor =  model.car_NameColor;
-        favNewsDBA.car_color =  model.car_color;
-        favNewsDBA.owner_id = model.owner_id;
-        favNewsDBA.owner_name =  model.owner_name;
-        favNewsDBA.owner_phone =  model.owner_phone;
-        [realm addObject:favNewsDBA];
-        [realm commitWriteTransaction];
+        for (MICarList_Model *model in array)
+        {
+            RLMRealm *realm = [RLMRealm defaultRealm];
+            [realm beginWriteTransaction];
+            MICarList_DBAModel *favNewsDBA = [[MICarList_DBAModel alloc] init];
+            favNewsDBA.car_id = model.car_id;
+            favNewsDBA.car_type =  model.car_type;
+            favNewsDBA.car_model =  [NSString stringWithFormat:@"%@ Realm",model.car_model];
+            favNewsDBA.car_NameColor =  model.car_NameColor;
+            favNewsDBA.car_color =  model.car_color;
+            favNewsDBA.owner_id = model.owner_id;
+            favNewsDBA.owner_name =  model.owner_name;
+            favNewsDBA.owner_phone =  model.owner_phone;
+            [realm addObject:favNewsDBA];
+            [realm commitWriteTransaction];
+        }
     }
 }
 
 -(void)getDataFromDBA
 {
     NSMutableArray *carsInfo = [NSMutableArray new];
-    self.realmArray = [MICarList_DBAModel allObjects];
     for (MICarList_DBAModel *realmModel in self.realmArray)
     {
         MICarList_Model *model = [MICarList_Model new];

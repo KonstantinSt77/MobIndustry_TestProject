@@ -11,7 +11,7 @@
 #import "MICarList_Presenter.h"
 #import "MICarList_Model.h"
 
-static int const HeaderTag = 111;
+static int const HeaderTag = 10101;
 static int const HeaderHeight = 50;
 static int const CellHeight = 130;
 static NSString* const ArrowName = @"arrow";
@@ -189,6 +189,7 @@ static NSString* const ArrowName = @"arrow";
     self.expandedSectionHeaderNumber = -1;
     [self.carsInfo removeAllObjects];
     [self.carsName removeAllObjects];
+    [self.tableView reloadData];
 }
 
 #pragma mark - Expand/Collapse
