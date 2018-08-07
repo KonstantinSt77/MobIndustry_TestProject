@@ -20,7 +20,7 @@
 
 *iPhoneX supported*
 
-![Gift](https://media.giphy.com/media/vFKqnCdLPNOKc/giphy.gif)
+![Gift](https://github.com/KonstantinSt77/MobIndustry_TestProject/blob/master/animateProject.gif)
 
 
 
