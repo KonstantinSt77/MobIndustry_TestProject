@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface MICarList_VC : UIViewController
--(void)updateViewWithData:(NSDictionary *)dataDict;
+-(void)updateViewWithData:(NSMutableArray *)array;
 @end

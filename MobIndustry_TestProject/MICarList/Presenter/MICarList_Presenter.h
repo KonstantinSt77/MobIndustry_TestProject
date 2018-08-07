@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 @interface MICarList_Presenter : NSObject
 -(void)initWithView:(id)view;
@@ -14,4 +15,6 @@
 -(NSString *)getTaskInfo;
 -(void)refreshTabelViewDataFromServer;
 -(void)refreshTabelViewDataFromDBA;
+-(UIColor *)giveColorFromStringColor:(NSString *)colorname;
+-(UIColor *)giveInverseColorFromStringColor:(NSString *)colorname;
 @end

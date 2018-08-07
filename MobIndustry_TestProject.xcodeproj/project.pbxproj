@@ -22,6 +22,7 @@
 		483A6A0B2118D5C6007B3B66 /* MICarList_Model.m in Sources */ = {isa = PBXBuildFile; fileRef = 483A6A0A2118D5C6007B3B66 /* MICarList_Model.m */; };
 		483A6A172118D774007B3B66 /* MICarListTVCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 483A6A162118D774007B3B66 /* MICarListTVCell.m */; };
 		483A6A192119091F007B3B66 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 483A6A182119091F007B3B66 /* README.md */; };
+		8BD3A9C42119A50700DCF9CC /* MICarList_DBAModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BD3A9C32119A50700DCF9CC /* MICarList_DBAModel.m */; };
 		CAD304FB59BDC6ACFDB8489B /* libPods-MobIndustry_TestProject.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A3F7E39A5AE99E35617E0FF1 /* libPods-MobIndustry_TestProject.a */; };
 		E558369D916D21B83D029823 /* libPods-MobIndustry_TestProjectUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 975CC322E070C97919EF1621 /* libPods-MobIndustry_TestProjectUITests.a */; };
 /* End PBXBuildFile section */
@@ -72,6 +73,8 @@
 		483A6A182119091F007B3B66 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		75DAF9E753064F21F6710C70 /* Pods-MobIndustry_TestProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobIndustry_TestProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-MobIndustry_TestProject/Pods-MobIndustry_TestProject.release.xcconfig"; sourceTree = "<group>"; };
 		7C4D65423B1AB460300859AF /* Pods-MobIndustry_TestProjectTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobIndustry_TestProjectTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MobIndustry_TestProjectTests/Pods-MobIndustry_TestProjectTests.release.xcconfig"; sourceTree = "<group>"; };
+		8BD3A9C22119A50700DCF9CC /* MICarList_DBAModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MICarList_DBAModel.h; sourceTree = "<group>"; };
+		8BD3A9C32119A50700DCF9CC /* MICarList_DBAModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MICarList_DBAModel.m; sourceTree = "<group>"; };
 		975CC322E070C97919EF1621 /* libPods-MobIndustry_TestProjectUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MobIndustry_TestProjectUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C3664BCB3B403E0B340E444 /* libPods-MobIndustry_TestProjectTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MobIndustry_TestProjectTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3F7E39A5AE99E35617E0FF1 /* libPods-MobIndustry_TestProject.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MobIndustry_TestProject.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -175,6 +178,8 @@
 			children = (
 				483A6A092118D5C6007B3B66 /* MICarList_Model.h */,
 				483A6A0A2118D5C6007B3B66 /* MICarList_Model.m */,
+				8BD3A9C22119A50700DCF9CC /* MICarList_DBAModel.h */,
+				8BD3A9C32119A50700DCF9CC /* MICarList_DBAModel.m */,
 				483A6A152118D774007B3B66 /* MICarListTVCell.h */,
 				483A6A162118D774007B3B66 /* MICarListTVCell.m */,
 			);
@@ -542,6 +547,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				483A6A172118D774007B3B66 /* MICarListTVCell.m in Sources */,
+				8BD3A9C42119A50700DCF9CC /* MICarList_DBAModel.m in Sources */,
 				483A6A052118D599007B3B66 /* MICarList_VC.m in Sources */,
 				483A6A0B2118D5C6007B3B66 /* MICarList_Model.m in Sources */,
 				483A69DD2118C163007B3B66 /* main.m in Sources */,
@@ -720,7 +726,10 @@
 				DEVELOPMENT_TEAM = 487D8YHE27;
 				INFOPLIST_FILE = "$(SRCROOT)/MobIndustry_TestProject/Default/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.sks.MobIndustry-TestProject";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -736,7 +745,10 @@
 				DEVELOPMENT_TEAM = 487D8YHE27;
 				INFOPLIST_FILE = "$(SRCROOT)/MobIndustry_TestProject/Default/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.sks.MobIndustry-TestProject";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -751,7 +763,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 487D8YHE27;
 				INFOPLIST_FILE = MobIndustry_TestProjectTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.sks.MobIndustry-TestProjectTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -767,7 +783,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 487D8YHE27;
 				INFOPLIST_FILE = MobIndustry_TestProjectTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.sks.MobIndustry-TestProjectTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -782,7 +802,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 487D8YHE27;
 				INFOPLIST_FILE = MobIndustry_TestProjectUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.sks.MobIndustry-TestProjectUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -797,7 +821,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 487D8YHE27;
 				INFOPLIST_FILE = MobIndustry_TestProjectUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.sks.MobIndustry-TestProjectUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";

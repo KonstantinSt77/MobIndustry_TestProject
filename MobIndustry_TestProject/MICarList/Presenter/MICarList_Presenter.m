@@ -9,9 +9,12 @@
 #import "MICarList_Presenter.h"
 #import "MICarList_VC.h"
 #import "MICarList_Model.h"
+#import <Realm/Realm.h>
+#import "MICarList_DBAModel.h"
 
 @interface MICarList_Presenter()
 @property (strong, nonatomic) MICarList_VC *carListView;
+@property RLMResults *realmArray;
 @end
 
 @implementation MICarList_Presenter
@@ -21,35 +24,6 @@
     _carListView = view;
 }
 
-- (void)getData
-{
-    NSArray *carsArray = [self getDataFromJSON];
-    NSMutableArray *carsName = [NSMutableArray new];
-    NSMutableArray *carsInfo = [NSMutableArray new];
-    NSMutableDictionary *data = [NSMutableDictionary new];
-    for (NSDictionary *car in carsArray)
-    {
-        MICarList_Model *model = [MICarList_Model new];
-        model.car_id = car[@"car_id"];
-        model.car_type = car[@"car_type"];
-        model.car_model = car[@"car_model"];
-        model.car_NameColor = car[@"car_color"];
-        model.car_color = [self giveColorFromStringColor:[NSString stringWithFormat:@"%@Color",car[@"car_color"]]];
-        model.carInverse_color = [self giveInverseColorFromStringColor:[NSString stringWithFormat:@"%@Color",car[@"car_color"]]];
-        NSArray *owners = car[@"owners"];
-        NSDictionary *ownerDict = owners.firstObject;
-        model.owner_id = ownerDict[@"owner_id"];
-        model.owner_name = ownerDict[@"owner_name"];
-        model.owner_phone = ownerDict[@"owner_phone"];
-        [carsName addObject:car[@"car_model"]];
-        [carsInfo addObject:model];
-    }
-    [data setObject:carsName forKey:@"carsName"];
-    [data setObject:carsInfo forKey:@"carsInfo"];
-    [self saveDataToDBA:data];
-    [_carListView updateViewWithData:data];
-}
-
 -(void)refreshTabelViewDataFromServer
 {
     [self getData];
@@ -57,18 +31,70 @@
 
 -(void)refreshTabelViewDataFromDBA
 {
-    
+    [self getDataFromDBA];
 }
 
--(void)saveDataToDBA:(NSDictionary *)dict
+- (void)getData
 {
-    
+    NSArray *carsArray = [self getDataFromJSON];
+    NSMutableArray *carsInfo = [NSMutableArray new];
+    for (NSDictionary *car in carsArray)
+    {
+        MICarList_Model *model = [MICarList_Model new];
+        model.car_id = [NSString stringWithFormat:@"%@",car[@"car_id"]];
+        model.car_type = car[@"car_type"];
+        model.car_model = car[@"car_model"];
+        model.car_NameColor = car[@"car_color"];
+        model.car_color = [NSString stringWithFormat:@"%@Color",car[@"car_color"]];
+        NSArray *owners = car[@"owners"];
+        NSDictionary *ownerDict = owners.firstObject;
+        model.owner_id = [NSString stringWithFormat:@"%@",ownerDict[@"owner_id"]];
+        model.owner_name = ownerDict[@"owner_name"];
+        model.owner_phone = ownerDict[@"owner_phone"];
+        [carsInfo addObject:model];
+    }
+    [self saveDataToDBA:carsInfo];
+    [_carListView updateViewWithData:carsInfo];
 }
 
--(NSDictionary *)getDataFromDBA
+-(void)saveDataToDBA:(NSArray *)array
 {
-    NSMutableDictionary *data = [NSMutableDictionary new];
-    return data;
+    for (MICarList_Model *model in array)
+    {
+        RLMRealm *realm = [RLMRealm defaultRealm];
+        [realm beginWriteTransaction];
+        MICarList_DBAModel *favNewsDBA = [[MICarList_DBAModel alloc] init];
+        favNewsDBA.car_id = model.car_id;
+        favNewsDBA.car_type =  model.car_type;
+        favNewsDBA.car_model =  [NSString stringWithFormat:@"%@ Realm",model.car_model];
+        favNewsDBA.car_NameColor =  model.car_NameColor;
+        favNewsDBA.car_color =  model.car_color;
+        favNewsDBA.owner_id = model.owner_id;
+        favNewsDBA.owner_name =  model.owner_name;
+        favNewsDBA.owner_phone =  model.owner_phone;
+        [realm addObject:favNewsDBA];
+        [realm commitWriteTransaction];
+    }
+}
+
+-(void)getDataFromDBA
+{
+    NSMutableArray *carsInfo = [NSMutableArray new];
+    self.realmArray = [MICarList_DBAModel allObjects];
+    for (MICarList_DBAModel *realmModel in self.realmArray)
+    {
+        MICarList_Model *model = [MICarList_Model new];
+        model.car_id = realmModel.car_id;
+        model.car_type =  realmModel.car_type;
+        model.car_model =  realmModel.car_model;
+        model.car_NameColor =  realmModel.car_NameColor;
+        model.car_color =  realmModel.car_color;
+        model.owner_id = realmModel.owner_id;
+        model.owner_name =  realmModel.owner_name;
+        model.owner_phone =  realmModel.owner_phone;
+        [carsInfo addObject:model];
+    }
+    [_carListView updateViewWithData:carsInfo];
 }
 
 -(NSString *)getTaskInfo

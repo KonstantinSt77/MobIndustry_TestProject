@@ -4,7 +4,6 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -102,7 +101,7 @@
                                                     <size key="shadowOffset" width="1" height="1"/>
                                                 </label>
                                             </subviews>
-                                            <color key="backgroundColor" red="0.41746972723679204" green="0.42588910191534091" blue="0.43667017487046633" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <color key="backgroundColor" red="0.078462919387963515" green="0.10122829586348342" blue="0.43667017487046633" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                             <constraints>
                                                 <constraint firstItem="dPS-zT-AOY" firstAttribute="leading" secondItem="YGv-Zv-tmv" secondAttribute="trailing" constant="8" id="5sN-rg-bRg"/>
                                                 <constraint firstItem="3Vc-oA-mBV" firstAttribute="leading" secondItem="OUV-eK-gUs" secondAttribute="leading" constant="16" id="KFY-WG-qSk"/>
@@ -182,7 +181,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" red="0.84010686528497414" green="0.083875406776170502" blue="0.29116933048203009" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <color key="barTintColor" red="0.52490785882307101" green="0.63901826291504293" blue="0.41079745473109908" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="barTintColor" red="0.67028269978157951" green="0.66704461910630619" blue="0.67352078045685282" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <textAttributes key="titleTextAttributes">
                             <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

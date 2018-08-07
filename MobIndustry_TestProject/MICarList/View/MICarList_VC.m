@@ -78,10 +78,13 @@ static NSString* const ArrowName = @"arrow";
                     completion:NULL];
 }
 
--(void)updateViewWithData:(NSDictionary *)dataDict
+-(void)updateViewWithData:(NSMutableArray *)array
 {
-    self.carsName = dataDict[@"carsName"];
-    self.carsInfo = dataDict[@"carsInfo"];
+    self.carsInfo = array;
+    self.carsName = [NSMutableArray new];
+    for (MICarList_Model *model in array) {
+        [self.carsName addObject:model.car_model];
+    }
     [self.tableView reloadData];
 }
 
@@ -158,13 +161,13 @@ static NSString* const ArrowName = @"arrow";
     cell.carDescription.text = model.car_type;
     cell.carDriver.text = model.owner_name;
     cell.carDriverPhone.text = model.owner_phone;
-    cell.colorName.textColor = model.carInverse_color;
     cell.colorName.text = model.car_NameColor;
+    cell.colorName.textColor = [_presenter giveInverseColorFromStringColor:model.car_color];
     cell.colorView.layer.cornerRadius = 40;
-    cell.colorView.layer.borderColor = cell.colorName.textColor.CGColor;
+    cell.colorView.layer.borderColor = [_presenter giveInverseColorFromStringColor:model.car_color].CGColor;
     cell.colorView.layer.borderWidth = 2.0f;
     cell.colorView.clipsToBounds = YES;
-    cell.colorView.backgroundColor = model.car_color;
+    cell.colorView.backgroundColor =  [_presenter giveColorFromStringColor:model.car_color];
     return cell;
 }
 

@@ -1,15 +1,17 @@
 //
-//  MICarList_Model.h
+//  MICarList_DBAModel.h
 //  MobIndustry_TestProject
 //
-//  Created by Konstantin on 06.08.2018.
+//  Created by Kostya on 07.08.2018.
 //  Copyright © 2018 SKS. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import "RLMArray.h"
+#import <Realm/Realm.h>
+#import "MICarList_Model.h"
 #import <UIKit/UIKit.h>
 
-@interface MICarList_Model : NSObject
+@interface MICarList_DBAModel : RLMObject
 @property (strong, nonatomic) NSString *car_id;
 @property (strong, nonatomic) NSString *car_type;
 @property (strong, nonatomic) NSString *car_model;
